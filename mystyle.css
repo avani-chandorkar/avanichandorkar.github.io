@@ -1,18 +1,22 @@
+/* The colors and font styles are based on my current live website */
 
 body {
   font-family: "Inter", Arial, sans-serif;
   background-color: #ffffff;
   color: #000;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-.container {
+.content-container {
   width: min(1100px, 90%);
   margin: 0 auto;
   padding: 2rem 0;
 }
 
-.site-header {
+
+.header-bar {
   background-color: #fff;
   border-bottom: 1px solid #eee;
   position: sticky;
@@ -20,83 +24,93 @@ body {
   z-index: 10;
 }
 
-.header-inner {
+.header-inner-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1rem 2rem; 
 }
 
-.logo {
+.site-logo {
   color: #025605;
   font-size: 1.25rem;
 }
 
-.main-nav a {
+.site-nav a {
   margin-left: 1rem;
   color: #333;
   text-decoration: none;
 }
 
-.main-nav a:hover {
+.site-nav a:hover {
   text-decoration: underline;
 }
 
-
-.main-nav a.active {
-  color: #025605; 
-  
-}
-
-
-
-.hero-section {
-  text-align: center;
-  padding: 3rem 0;
-}
-
-.intro-heading {
+.site-nav a.active {
   color: #025605;
-  font-size: 1.6rem;
+}
+
+
+.hero-section, .about-hero-section {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.about-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 24px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.about-intro h2 {
+  color: #025605;
   margin-bottom: 0.5rem;
 }
 
-.intro-subtext {
-  font-size: 1rem;
-  color: #333;
+.about-intro p {
+  color: #000;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
-.card-grid {
+
+.projects-section, .journey-section {
+  padding: 2rem 0;
+}
+
+.project-cards, .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
 
-.card {
+.project-card, .card {
   border: 1px solid #eee;
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.card img {
+.project-card img, .card img {
   width: 100%;
   display: block;
   height: auto;
 }
 
-.card-text {
+.project-info, .card-text {
   padding: 1rem;
 }
 
-.card-text h3 {
+.project-info h3, .card-text h3 {
   color: #025605;
   margin-bottom: 0.5rem;
 }
 
-.card-text p {
+.project-info p, .card-text p {
   color: #000;
   font-size: 0.95rem;
 }
@@ -145,29 +159,31 @@ h2, h3 {
 }
 
 
-footer {
+.footer-bar {
   border-top: 1px solid #ddd;
   padding-top: 2rem;
   margin-top: 3rem;
+  padding-left: 2rem;  
+  padding-right: 2rem;
 }
 
-.footer-grid {
+.footer-inner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
   margin-bottom: 1.5rem;
 }
 
-footer h4 {
+.footer-section h4 {
   margin-bottom: 0.5rem;
 }
 
-footer ul {
+.footer-section ul {
   list-style: none;
   padding: 0;
 }
 
-footer li {
+.footer-section li {
   margin-bottom: 0.3rem;
 }
 
@@ -179,32 +195,7 @@ footer li {
   padding-top: 1rem;
 }
 
-
-.about-hero {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.about-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 24px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.about-intro h2 {
-  color: #025605;
-  margin-bottom: 0.5rem;
-}
-
-.about-intro p {
-  color: #000;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.5;
-}
-
+/* Contact Section has additional css for for a specific card layout */
 
 .contact-page {
   padding: 2rem 0;
